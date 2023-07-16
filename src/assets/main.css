@@ -1,0 +1,154 @@
+@import url('./fonts/roboto/roboto.css');
+@import url('./fonts/thaleahfat/thaleahfat.css');
+@import url('./fonts/valmore/valmore.css');
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;
+}
+
+:root {
+  ::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #efefef;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c4c4c4;
+  }
+}
+
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Roboto' !important;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.input:active,
+.input:focus {
+  box-shadow: none !important;
+}
+
+.shadow {
+  text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-card-foot,
+.modal-card-head,
+.modal-card-body {
+  background-color: transparent !important;
+}
+
+.modal-card-head {
+  border-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.modal-card-body {
+  background-color: #2a2f34 !important;
+  color: #a5a6a8;
+  border-radius: 6px;
+  border-bottom: #202429 solid 2px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-card-head .delete {
+  width: 35px !important;
+  height: 35px !important;
+  max-width: 35px !important;
+  max-height: 35px !important;
+  min-width: 35px !important;
+  min-height: 35px !important;
+  background-color: rgba(1, 1, 1, 1) !important;
+}
+
+.modal-card-body .input {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  background-color: #24282c !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #a5a6a8 !important;
+  border-radius: 10px !important;
+}
+
+.modal-card-body .input:focus ~ .icon {
+  color: #a5a6a8 !important;
+}
+
+.modal-card-body .icon {
+  color: #a5a6a8 !important;
+}
+
+.modal-card-body .input::placeholder {
+  color: #a5a6a8 !important;
+}
+
+.button {
+  border: 3px #191c1f solid !important;
+  text-transform: uppercase;
+  font-family: 'Thaleahfat' !important;
+}
+
+.button.is-info {
+  background-color: #1977b6 !important;
+  box-shadow: inset -3px -3px 0px 0px #125d90 !important;
+}
+
+.button.is-info:hover {
+  background-color: #146ca8 !important;
+  box-shadow: inset -4px -4px 0px 0px #125d90 !important;
+}
+
+.button.is-info:active {
+  box-shadow: inset 3px 3px 0px 0px #125d90 !important;
+}
+
+.button.is-success {
+  background-color: #1ca863 !important;
+  box-shadow: inset -3px -3px 0px 0px #197e4c !important;
+}
+
+.button.is-success:hover {
+  background-color: #189a5a !important;
+  box-shadow: inset -4px -4px 0px 0px #197e4c !important;
+}
+
+.button.is-success:active {
+  box-shadow: inset 3px 3px 0px 0px #197e4c !important;
+}
+
+.modal-card-body a,
+.modal-card-body a:hover {
+  color: #6fb7fa !important;
+}
+
+.notification {
+  border-radius: 35px !important;
+}
