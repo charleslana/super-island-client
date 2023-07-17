@@ -27,7 +27,11 @@
             <div class="modal-card">
               <header class="modal-card-head">
                 <p class="modal-card-title"></p>
-                <button class="delete" aria-label="close" @click="showLoginModal = false"></button>
+                <button
+                  class="delete is-large"
+                  aria-label="close"
+                  @click="showLoginModal = false"
+                ></button>
               </header>
               <section class="modal-card-body">
                 <form @submit.prevent="login">
@@ -75,7 +79,7 @@
               <header class="modal-card-head">
                 <p class="modal-card-title"></p>
                 <button
-                  class="delete"
+                  class="delete is-large"
                   aria-label="close"
                   @click="showRegisterModal = false"
                 ></button>

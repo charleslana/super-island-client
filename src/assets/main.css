@@ -83,13 +83,8 @@ body {
 }
 
 .modal-card-head .delete {
-  width: 35px !important;
-  height: 35px !important;
-  max-width: 35px !important;
-  max-height: 35px !important;
-  min-width: 35px !important;
-  min-height: 35px !important;
   background-color: rgba(1, 1, 1, 1) !important;
+  opacity: 1;
 }
 
 .modal-card-body .input {
@@ -164,4 +159,14 @@ body {
 [data-tooltip]:not([disabled])::before {
   border-bottom: 3px solid #4d98d6 !important;
   border-radius: 6px !important;
+}
+
+.delete {
+  transform: rotate(0deg);
+  transition: transform 0.5s cubic-bezier(0.16, 0.81, 0.32, 1), opacity 0.5s ease;
+  opacity: 0.5;
+}
+
+.delete:hover {
+  transform: rotate(180deg);
 }
