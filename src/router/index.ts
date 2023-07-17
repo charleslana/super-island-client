@@ -1,3 +1,4 @@
+import GameView from '@/views/GameView.vue';
 import HomeView from '@/views/HomeView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -6,9 +7,15 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'model',
+      name: 'home',
       component: HomeView,
-      meta: { title: 'HomeView title' }
+      meta: { title: 'Super Island' }
+    },
+    {
+      path: '/game',
+      name: 'game',
+      component: GameView,
+      meta: { title: 'Game' }
     },
     {
       path: '/:catchAll(.*)',
@@ -27,7 +34,7 @@ router.beforeEach((to, _from, next) => {
   if (meta && meta.title) {
     document.title = meta.title;
   } else {
-    document.title = 'No title';
+    document.title = 'Super Island - Algum erro aconteceu';
   }
   next();
 });

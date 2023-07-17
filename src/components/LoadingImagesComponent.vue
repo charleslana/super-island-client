@@ -13,13 +13,14 @@ const isLoading = ref(true);
 onMounted(() => {
   const imageUrls = Object.values(images);
   const imagesToLoad = imageUrls.map((url) => {
-    return new Promise<void>((resolve, reject) => {
+    return new Promise<void>((resolve) => {
       const image = new Image();
       image.onload = () => {
         resolve();
       };
-      image.onerror = (error) => {
-        reject(error);
+      image.onerror = () => {
+        console.error('Erro ao carregar imagem:', url);
+        resolve();
       };
       image.src = url;
     });

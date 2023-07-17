@@ -33,13 +33,7 @@
                 <form @submit.prevent="login">
                   <div class="field">
                     <p class="control has-icons-left has-icons-right">
-                      <input
-                        class="input"
-                        type="email"
-                        placeholder="E-mail"
-                        required
-                        v-model="loginEmail"
-                      />
+                      <input class="input" type="email" placeholder="E-mail" v-model="loginEmail" />
                       <span class="icon is-small is-left">
                         <font-awesome-icon :icon="['fas', 'at']" />
                       </span>
@@ -51,7 +45,6 @@
                         class="input"
                         type="password"
                         placeholder="Senha"
-                        required
                         v-model="loginPassword"
                       />
                       <span class="icon is-small is-left">
@@ -91,7 +84,7 @@
                 <form @submit.prevent="register">
                   <div class="field">
                     <p class="control has-icons-left has-icons-right">
-                      <input class="input" type="email" placeholder="E-mail" />
+                      <input class="input" type="email" placeholder="E-mail" required />
                       <span class="icon is-small is-left">
                         <font-awesome-icon :icon="['fas', 'at']" />
                       </span>
@@ -99,7 +92,7 @@
                   </div>
                   <div class="field">
                     <p class="control has-icons-left">
-                      <input class="input" type="password" placeholder="Senha" />
+                      <input class="input" type="password" placeholder="Senha" required />
                       <span class="icon is-small is-left">
                         <font-awesome-icon :icon="['fas', 'lock']" />
                       </span>
@@ -107,7 +100,7 @@
                   </div>
                   <div class="field">
                     <p class="control has-icons-left">
-                      <input class="input" type="password" placeholder="Repita a Senha" />
+                      <input class="input" type="password" placeholder="Repita a Senha" required />
                       <span class="icon is-small is-left">
                         <font-awesome-icon :icon="['fas', 'lock']" />
                       </span>
@@ -143,6 +136,7 @@ import { bgHome, logo } from '@/data/imageData';
 import { version } from '@/config/config';
 import { showToast } from '@/utils/utils';
 import ToastEnum from '@/enum/ToastEnum';
+import router from '@/router';
 
 const showLoginModal = ref(false);
 
@@ -166,15 +160,16 @@ function toggleModal() {
 }
 
 async function login() {
-  showToast('Preencha todos os campos.', ToastEnum.Danger);
   console.log(loginEmail.value);
   console.log(loginPassword.value);
+  router.push({ name: 'game' });
 }
 
 async function register() {
   loading.value = true;
   setTimeout(() => {
     loading.value = false;
+    showToast('Preencha todos os campos.', ToastEnum.Danger);
   }, 2000);
 }
 </script>
