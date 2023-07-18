@@ -1,5 +1,5 @@
-import GameView from '@/views/GameView.vue';
 import HomeView from '@/views/HomeView.vue';
+import LoginRegisterView from '@/views/LoginRegisterView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -8,13 +8,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
-      meta: { title: 'Super Island' }
+      component: LoginRegisterView,
+      meta: { title: 'Super Island - Faça o login ou cadastro da sua conta' }
     },
     {
-      path: '/game',
-      name: 'game',
-      component: GameView,
+      path: '/game/home',
+      name: 'game-home',
+      component: HomeView,
       meta: { title: 'Game' }
     },
     {

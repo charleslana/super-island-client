@@ -170,3 +170,10 @@ body {
 .delete:hover {
   transform: rotate(180deg);
 }
+
+.badge {
+  min-width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+}

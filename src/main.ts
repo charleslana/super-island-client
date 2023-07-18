@@ -8,6 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import './assets/main.css';
 import './assets/lib/bulma.min.css';
 import './assets/lib/bulma-tooltip.min.css';
+import './assets/lib/bulma-badge.min.css';
 import './assets/lib/animate.min.css';
 
 library.add(faAt, faLock);
