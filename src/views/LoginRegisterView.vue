@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LoadingImagesComponent>
+    <LoadingAssetsComponent>
       <template #default="{ isLoading }">
         <LoadingOverlayComponent v-if="isLoading" />
         <div v-else>
@@ -128,13 +128,13 @@
           <LoadingOverlayComponent v-if="loading" />
         </div>
       </template>
-    </LoadingImagesComponent>
+    </LoadingAssetsComponent>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import LoadingImagesComponent from '@/components/LoadingImagesComponent.vue';
+import LoadingAssetsComponent from '@/components/LoadingAssetsComponent.vue';
 import LoadingOverlayComponent from '@/components/LoadingOverlayComponent.vue';
 import { bgHome, logo } from '@/data/imageData';
 import { version } from '@/config/config';
