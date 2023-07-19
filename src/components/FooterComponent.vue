@@ -3,7 +3,7 @@
     <div class="is-flex is-flex-direction-column is-clickable w-100">
       <div class="is-relative">
         <div class="is-relative footer-icon">
-          <img :src="worldMapFooter" alt="World menu" width="44" />
+          <img :src="worldMapFooter" alt="menu icon" width="44" />
           <span class="badge is-danger"></span>
         </div>
       </div>
@@ -15,7 +15,7 @@
     >
       <div class="is-relative">
         <div class="is-relative footer-icon">
-          <img :src="townFooter" alt="Town menu" width="44" />
+          <img :src="townFooter" alt="menu icon" width="44" />
         </div>
       </div>
       <div>Cidade</div>
@@ -26,19 +26,19 @@
       @click="$router.push({ name: 'game-home' })"
     >
       <div class="is-relative footer-icon">
-        <img :src="homeFooter" alt="Home menu" width="44" />
+        <img :src="homeFooter" alt="menu icon" width="44" />
       </div>
       <div>Casa</div>
     </div>
     <div class="is-flex is-flex-direction-column is-clickable w-100">
       <div class="is-relative footer-icon">
-        <img :src="characterFooter" alt="Character menu" width="44" />
+        <img :src="characterFooter" alt="menu icon" width="44" />
       </div>
       <div>Personagens</div>
     </div>
     <div class="is-flex is-flex-direction-column is-clickable w-100">
       <div class="is-relative footer-icon">
-        <img :src="bagFooter" alt="Bag menu" width="44" />
+        <img :src="bagFooter" alt="menu icon" width="44" />
       </div>
       <div>Mochila</div>
     </div>

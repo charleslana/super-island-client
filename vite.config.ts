@@ -12,10 +12,14 @@ export default defineConfig({
     }
   },
   build: {
-    assetsDir: 'assets',
+    assetsDir: 'src/assets',
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/images/[name].[ext]'
+        assetFileNames: (assetInfo) => {
+          const isFont = assetInfo.name && assetInfo.name.endsWith('.woff2');
+          const outputDir = isFont ? 'fonts' : 'images';
+          return `src/assets/${outputDir}/[name].[ext]`;
+        }
       }
     }
   }

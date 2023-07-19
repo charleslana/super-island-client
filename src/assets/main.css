@@ -1,6 +1,6 @@
-@import url('./fonts/roboto/roboto.css');
-@import url('./fonts/thaleahfat/thaleahfat.css');
-@import url('./fonts/valmore/valmore.css');
+@import url('./fonts/roboto.css');
+@import url('./fonts/thaleahfat.css');
+@import url('./fonts/valmore.css');
 
 * {
   -webkit-tap-highlight-color: transparent;
@@ -29,7 +29,7 @@ html {
   color: #ffffff;
   width: 100vw;
   height: 100vh;
-  overflow-y: auto !important;
+  overflow-y: hidden !important;
 }
 
 body {
@@ -49,6 +49,10 @@ body {
 
 .shadow {
   text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+
+.text-shadow {
+  text-shadow: -1px 0 #202429, 0 1px #202429, 1px 0 #202429, 0 -1px #202429;
 }
 
 .w-100 {
@@ -176,4 +180,11 @@ body {
   height: 8px !important;
   border-radius: 50% !important;
   padding: 0 !important;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }

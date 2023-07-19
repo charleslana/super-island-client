@@ -9,8 +9,8 @@
           transform: `translate(${dragPosition.x}px, ${dragPosition.y}px)`
         }"
         v-interact-draggable="dragOptions"
-        @dragmove="onDragMove"
       ></div>
+      <FloatMenuComponent />
     </div>
     <FooterComponent />
   </div>
@@ -22,6 +22,7 @@ import NavComponent from '@/components/NavComponent.vue';
 import { computed, ref } from 'vue';
 import interact from 'interactjs';
 import FooterComponent from '@/components/FooterComponent.vue';
+import FloatMenuComponent from '@/components/FloatMenuComponent.vue';
 
 const bgHomeStyle = computed(() => {
   return {
@@ -35,11 +36,12 @@ const dragOptions = {
   modifiers: [
     interact.modifiers.restrictRect({
       restriction: '.map',
-      endOnly: true
+      endOnly: false
     })
   ],
   listeners: {
-    move: onDragMove
+    move: onDragMove,
+    end: onDragEnd
   }
 };
 
@@ -48,6 +50,8 @@ function onDragMove(event: Interact.InteractEvent) {
   dragPosition.value.x += dx;
   dragPosition.value.y += dy;
 }
+
+function onDragEnd() {}
 </script>
 
 <style scoped>
@@ -59,6 +63,7 @@ function onDragMove(event: Interact.InteractEvent) {
   background-repeat: no-repeat;
   background-color: #4fc498 !important;
   touch-action: none;
+  position: relative;
 }
 
 .page {
@@ -69,7 +74,8 @@ function onDragMove(event: Interact.InteractEvent) {
 .map {
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 @media screen and (min-width: 1408px) {
