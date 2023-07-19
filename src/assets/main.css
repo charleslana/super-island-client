@@ -188,3 +188,7 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
 }
+
+button:focus-visible {
+  outline: none !important;
+}
