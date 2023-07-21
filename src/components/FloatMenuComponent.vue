@@ -4,8 +4,8 @@
       class="is-flex is-justify-content-space-between"
       :class="{
         animate__animated: true,
-        animate__slideInDown: showMenu,
-        animate__slideOutUp: !showMenu,
+        animate__slideInDown: showMenu && !isShow,
+        animate__slideOutUp: !showMenu && !isShow,
         animate__faster: animating,
         'is-hidden': !showMenu && !animating
       }"
@@ -70,8 +70,8 @@
       class="is-flex is-justify-content-flex-end"
       :class="{
         animate__animated: true,
-        animate__slideInDown: showMenu,
-        animate__slideOutUp: !showMenu,
+        animate__slideInDown: showMenu && !isShow,
+        animate__slideOutUp: !showMenu && !isShow,
         animate__faster: animating,
         'is-hidden': !showMenu && !animating
       }"
@@ -119,8 +119,10 @@ const showMenu = ref(true);
 const animating = ref(false);
 const menuLeftDiv = ref<HTMLElement | null>(null);
 const menuRightDiv = ref<HTMLElement | null>(null);
+const isShow = ref(true);
 
 function toggleMenuTop() {
+  isShow.value = false;
   showMenu.value = !showMenu.value;
   saveShowMenu(showMenu.value);
 }
@@ -153,6 +155,7 @@ onMounted(() => {
   menuLeftDiv.value?.addEventListener('animationend', onAnimationEnd);
   showMenu.value = getShowMenu();
   if (!showMenu.value && menuLeftDiv.value && menuRightDiv.value) {
+    isShow.value = false;
     menuLeftDiv.value.classList.add('is-hidden', 'pe-none');
     menuRightDiv.value.classList.add('is-hidden', 'pe-none');
   }
