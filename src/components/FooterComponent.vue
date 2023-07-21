@@ -76,4 +76,8 @@ import {
 .active {
   background: #2e3439 !important;
 }
+
+.badge {
+  transform: translate(-50%, 50%);
+}
 </style>

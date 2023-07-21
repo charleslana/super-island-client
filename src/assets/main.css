@@ -192,3 +192,11 @@ img {
 button:focus-visible {
   outline: none !important;
 }
+
+.pe-none {
+  pointer-events: none !important;
+}
+
+.badge {
+  z-index: 1;
+}
