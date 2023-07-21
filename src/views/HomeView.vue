@@ -11,6 +11,7 @@
         v-interact-draggable="dragOptions"
       ></div>
       <FloatMenuComponent />
+      <FloatQuestComponent />
     </div>
     <FooterComponent />
   </div>
@@ -23,6 +24,7 @@ import { computed, ref } from 'vue';
 import interact from 'interactjs';
 import FooterComponent from '@/components/FooterComponent.vue';
 import FloatMenuComponent from '@/components/FloatMenuComponent.vue';
+import FloatQuestComponent from '@/components/FloatQuestComponent.vue';
 
 const bgHomeStyle = computed(() => {
   return {

@@ -2,7 +2,14 @@ import App from './App.vue';
 import interact from 'interactjs';
 import router from './router';
 import { createApp } from 'vue';
-import { faAt, faChevronDown, faChevronUp, faLock } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAt,
+  faChevronDown,
+  faChevronLeft,
+  faChevronRight,
+  faChevronUp,
+  faLock
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import './assets/main.css';
@@ -11,7 +18,7 @@ import './assets/lib/bulma-tooltip.min.css';
 import './assets/lib/bulma-badge.min.css';
 import './assets/lib/animate.min.css';
 
-library.add(faAt, faLock, faChevronUp, faChevronDown);
+library.add(faAt, faLock, faChevronUp, faChevronDown, faChevronLeft, faChevronRight);
 
 const app = createApp(App);
 

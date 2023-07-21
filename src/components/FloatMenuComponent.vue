@@ -63,6 +63,11 @@
     </div>
     <button @click="toggleMenuTop">
       <font-awesome-icon :icon="['fas', showMenu ? 'chevron-up' : 'chevron-down']" />
+      <span
+        class="badge is-danger"
+        :class="{ 'is-hidden': showMenu }"
+        style="transform: none !important"
+      ></span>
     </button>
   </div>
   <div class="menu-right">
@@ -186,12 +191,14 @@ button {
   border: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: #a5a6a8;
-  width: 45px;
+  width: 52px;
+  height: 20px;
   border-radius: 2px;
   cursor: pointer;
   font-size: 20px;
   padding: 0;
   margin: 0 auto;
+  position: relative;
 }
 
 .badge {
@@ -202,7 +209,7 @@ button {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 195px;
+  width: auto;
   height: auto;
   color: #ffffff;
   font-weight: 600;
