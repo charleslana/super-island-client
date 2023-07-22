@@ -8,7 +8,9 @@ import {
   faChevronLeft,
   faChevronRight,
   faChevronUp,
-  faLock
+  faLock,
+  faMagnifyingGlass,
+  faMoneyBill1
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -18,7 +20,16 @@ import './assets/lib/bulma-tooltip.min.css';
 import './assets/lib/bulma-badge.min.css';
 import './assets/lib/animate.min.css';
 
-library.add(faAt, faLock, faChevronUp, faChevronDown, faChevronLeft, faChevronRight);
+library.add(
+  faAt,
+  faLock,
+  faChevronUp,
+  faChevronDown,
+  faChevronLeft,
+  faChevronRight,
+  faMagnifyingGlass,
+  faMoneyBill1
+);
 
 const app = createApp(App);
 

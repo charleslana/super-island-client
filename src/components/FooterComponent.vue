@@ -9,10 +9,7 @@
       </div>
       <div>Mundo</div>
     </div>
-    <div
-      class="is-flex is-flex-direction-column is-clickable w-100"
-      @click="$router.push({ path: '/err' })"
-    >
+    <div class="is-flex is-flex-direction-column is-clickable w-100">
       <div class="is-relative">
         <div class="is-relative footer-icon">
           <img :src="townFooter" alt="menu icon" width="44" />
@@ -36,7 +33,11 @@
       </div>
       <div>Personagens</div>
     </div>
-    <div class="is-flex is-flex-direction-column is-clickable w-100">
+    <div
+      class="is-flex is-flex-direction-column is-clickable w-100"
+      :class="{ active: $router.currentRoute.value.name === 'game-bag' }"
+      @click="$router.push({ name: 'game-bag' })"
+    >
       <div class="is-relative footer-icon">
         <img :src="bagFooter" alt="menu icon" width="44" />
       </div>

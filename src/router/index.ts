@@ -1,5 +1,6 @@
 import HomeView from '@/views/HomeView.vue';
 import LoginRegisterView from '@/views/LoginRegisterView.vue';
+import BagView from '@/views/BagView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -15,7 +16,13 @@ const router = createRouter({
       path: '/game/home',
       name: 'game-home',
       component: HomeView,
-      meta: { title: 'Game' }
+      meta: { title: 'Casa' }
+    },
+    {
+      path: '/game/bag',
+      name: 'game-bag',
+      component: BagView,
+      meta: { title: 'Mochila' }
     },
     {
       path: '/:catchAll(.*)',
