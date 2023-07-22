@@ -12,6 +12,7 @@
       ></div>
       <FloatMenuComponent />
       <FloatQuestComponent />
+      <FloatFooterComponent />
     </div>
     <FooterComponent />
   </div>
@@ -25,6 +26,7 @@ import interact from 'interactjs';
 import FooterComponent from '@/components/FooterComponent.vue';
 import FloatMenuComponent from '@/components/FloatMenuComponent.vue';
 import FloatQuestComponent from '@/components/FloatQuestComponent.vue';
+import FloatFooterComponent from '@/components/FloatFooterComponent.vue';
 
 const bgHomeStyle = computed(() => {
   return {

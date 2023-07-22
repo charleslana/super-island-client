@@ -60,7 +60,7 @@ import {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 65px;
+  height: 60px;
   padding: 2px !important;
   background-color: #202429 !important;
   color: #949494;
@@ -71,10 +71,12 @@ import {
 .footer-icon {
   width: 44px;
   margin: 0 auto;
+  display: flex;
 }
 
 .active {
   background: #2e3439 !important;
+  height: 60px;
 }
 
 .badge {
