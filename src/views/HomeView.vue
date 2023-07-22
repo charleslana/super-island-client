@@ -27,6 +27,8 @@ import FooterComponent from '@/components/FooterComponent.vue';
 import FloatMenuComponent from '@/components/FloatMenuComponent.vue';
 import FloatQuestComponent from '@/components/FloatQuestComponent.vue';
 import FloatFooterComponent from '@/components/FloatFooterComponent.vue';
+import { saveHomeMapPosition, getHomeMapPosition } from '@/utils/localStorageUtils';
+import { isMobileDevice } from '@/utils/utils';
 
 const bgHomeStyle = computed(() => {
   return {
@@ -49,13 +51,20 @@ const dragOptions = {
   }
 };
 
+const savedPosition = getHomeMapPosition();
+if (savedPosition && isMobileDevice()) {
+  dragPosition.value = savedPosition;
+}
+
 function onDragMove(event: Interact.InteractEvent) {
   const { dx, dy } = event;
   dragPosition.value.x += dx;
   dragPosition.value.y += dy;
 }
 
-function onDragEnd() {}
+function onDragEnd() {
+  saveHomeMapPosition(dragPosition.value);
+}
 </script>
 
 <style scoped>

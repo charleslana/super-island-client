@@ -22,3 +22,7 @@ export function formatCompactNumber(number: number): string {
   const formatter = new Intl.NumberFormat('en-US', { notation: 'compact' });
   return formatter.format(number);
 }
+
+export function isMobileDevice(): boolean {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
